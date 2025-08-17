@@ -80,7 +80,7 @@ type Stmt =
   | { kind: "turn"; dir: "LEFT" | "RIGHT" }
   | { kind: "scan" }
   | { kind: "attack" }
-  | { kind: "if"; cond: Expr; thenStmt: Stmt; elseStmt?: Stmt }
+  | { kind: "if"; cond: Expr; thenStmt: Stmt; elseStmt?: Stmt | null | undefined }
   | { kind: "call"; name: string }
   | { kind: "noop" }
   | { kind: "function"; name: string; body: Stmt[] };
